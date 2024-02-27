@@ -19,4 +19,7 @@ selected_row = data.loc[4]
 # 데이터 행 선택
 print(selected_row)
 
+filtered_data = data[data['Age'] > 5 ]
+# 조건을 통한 필터링
+print(filtered_data)
 

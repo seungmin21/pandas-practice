@@ -25,13 +25,16 @@ data = pd.read_csv('./netflix_titles.csv')
 # print(data.head(20))
 # print(data.info())
 
-filtered_data = data['country']
-print(filtered_data)
+# filtered_data = data['country']
+# print(filtered_data)
 
-selected_column = data['country']
-selected_row = data.loc['South_Korea']
-print(selected_row)
-print(selected_column)
+# selected_column = data['country']
+# selected_row = data.loc['South_Korea']
+# print(selected_row)
+# print(selected_column)
 
+# 두개의 열의 행 데이터를 전체 출력하는 것
+select_data = ['title', 'duration']
+print(data[select_data])
 
 

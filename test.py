@@ -30,3 +30,13 @@ print(data['Age'])
 # 통계 계산
 mean_value = data['Age'].mean()
 print(mean_value)
+
+
+# 결측치 확인, 제거, 채우기 제거 및 채우기는 None 발생
+print(data.isnull().sum())
+print(data.dropna(inplace=True))
+print(data.fillna(5, inplace=True))
+
+
+
+

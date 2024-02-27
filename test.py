@@ -37,6 +37,14 @@ print(data.isnull().sum())
 print(data.dropna(inplace=True))
 print(data.fillna(5, inplace=True))
 
+# 데이터 시각화 히스토그램, 상자 그림
+data['Age'].hist()
+data.boxplot(column='Fare')
 
+plt.show()
+
+
+# 엑셀 파일로 저장
+data.to_excel('titanic.xlsx', index=False)
 
 

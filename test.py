@@ -23,3 +23,9 @@ filtered_data = data[data['Age'] > 5 ]
 # 조건을 통한 필터링
 print(filtered_data)
 
+# 데이터 열 합치기
+data['Age'] = data['Sex'] + data['Fare']
+print(data['Age'])
+
+
+

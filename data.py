@@ -34,7 +34,14 @@ data = pd.read_csv('./netflix_titles.csv')
 # print(selected_column)
 
 # 두개의 열의 행 데이터를 전체 출력하는 것
-select_data = ['title', 'duration']
-print(data[select_data])
+# select_data = ['title', 'duration']
+# print(data[select_data])
+
+
+# 최대 값을 새로운 열에 추가하는 형태
+data['numeric'] = data['duration'].str.extract('(\d+)').astype(float)
+max_time_row = data.loc[data['numeric'].idxmax()]
+
+print(max_time_row)
 
 

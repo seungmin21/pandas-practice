@@ -8,4 +8,7 @@ data = pd.read_csv('./train_and_test2.csv')
 # 데이터 확인 
 print(data.head())
 
+# 데이터 요약
+print(data.info())
+
 

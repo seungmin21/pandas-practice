@@ -11,4 +11,12 @@ print(data.head())
 # 데이터 요약
 print(data.info())
 
+selected_column = data['Age']
+# 데이터 열 선택
+print(selected_column)
+
+selected_row = data.loc[4]
+# 데이터 행 선택
+print(selected_row)
+
 

@@ -18,3 +18,10 @@ with open(csv_file, 'r', encoding='utf-8') as file:
 
 print(csv_file)
 
+data = pd.read_csv('./netflix_titles.csv')
+
+print(data)
+print(data.head())
+print(data.head(20))
+print(data.info())
+

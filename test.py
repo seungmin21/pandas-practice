@@ -27,5 +27,6 @@ print(filtered_data)
 data['Age'] = data['Sex'] + data['Fare']
 print(data['Age'])
 
-
-
+# 통계 계산
+mean_value = data['Age'].mean()
+print(mean_value)

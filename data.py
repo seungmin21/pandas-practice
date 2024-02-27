@@ -39,9 +39,15 @@ data = pd.read_csv('./netflix_titles.csv')
 
 
 # 최대 값을 새로운 열에 추가하는 형태
-data['numeric'] = data['duration'].str.extract('(\d+)').astype(float)
-max_time_row = data.loc[data['numeric'].idxmax()]
+# data['numeric'] = data['duration'].str.extract('(\d+)').astype(float)
+# max_time_row = data.loc[data['numeric'].idxmax()]
 
-print(max_time_row)
+# print(max_time_row)
 
+# 열을 추가 하지 않고 기존의 열의 행에서 최대값 찾는 형태
+numeric_values = data['duration'].str.extract('(\d+)').astype(float)
+max_value_row = data.loc[numeric_values.idxmax()]
+print(max_value_row)
 
+# 최대값 찾기 없어도 무방
+# max_value = numeric_values.max()

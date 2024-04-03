@@ -22,11 +22,14 @@ for _ in range(9):  # 2번째부터 10번째까지 총 9번 반복
     # 결과 리스트에 추가
     top_10_max_values.append(max_value_row)
 
-# 결과를 새로운 데이터프레임으로 생성
-result_df = pd.DataFrame(top_10_max_values)
-
-# 새로운 CSV 파일로 저장
+# 결과를 새로운 CSV 파일로 저장
 filename = 'netflix_top10.csv'
-result_df.to_csv(filename, index=False)
+with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
+    csv_writer = csv.writer(csvfile)
+    # 헤더 작성
+    csv_writer.writerow(data.columns)
+    # 데이터 작성
+    for row in top_10_max_values:
+        csv_writer.writerow(row)
 
 print(f"CSV 파일 '{filename}'이 생성되었습니다.")

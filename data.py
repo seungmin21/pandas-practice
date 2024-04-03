@@ -47,21 +47,23 @@ data = pd.read_csv('./netflix_titles.csv')
 # 열을 추가 하지 않고 기존의 열의 행에서 최대값 찾는 형태
 numeric_values = data['duration'].str.extract('(\d+)').astype(float)
 max_value_row = data.loc[numeric_values.idxmax()]
-# print(max_value_row)
 
 # 최대값 제외하기
-max_value = numeric_values.max()
-numeric_values = numeric_values[numeric_values < max_value]
+# max_value = numeric_values.max()
+# numeric_values = numeric_values[numeric_values < max_value]
 
 # 다시 최대값 찾기
-second_max_value_row = data.loc[numeric_values.idxmax()]
+# second_max_value_row = data.loc[numeric_values.idxmax()]
 
 # 결과 출력
-print(max_value_row)
-print(second_max_value_row)
+# print(max_value_row)
+# print(second_max_value_row)
 
 # 최대값 찾기 없어도 무방
 # max_value = numeric_values.max()
 
-
+# duration 컬럼이 있는지 확인
 # print(data.columns)
+
+result = max_value_row.nlargest(10)
+print(result)
